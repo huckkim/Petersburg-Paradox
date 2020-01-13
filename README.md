@@ -30,3 +30,4 @@ If you for some reason want to play around with this thing then the features are
     int goal_init = 10, goal_final = 100; // Initial and final target profit values
     int games = 100;                      // Games needed for each bankroll check
 ```
+The results are outputted to values.txt.

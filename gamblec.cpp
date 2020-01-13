@@ -49,14 +49,17 @@ int main(){
     vector<int> goals;
     vector<int> wallets;
 
-    double thres = 0.9;
-
     ofstream myfile;
+    
+    double thres = 0.9;
+    int cost_init = 10, cost_final = 23;
+    int goal_init = 10, goal_final = 100;
+    int games = 100;
 
-    for(int cost = 10; cost < 23; cost++){
+    for(int cost = cost_init; cost < cost_final; cost++){
         int init_w = 10;
-        for(int goal = 10; goal < 100; goal += 10){
-            int calc = find_wallet(cost, init_w, goal, thres, 100);
+        for(int goal = goal_init; goal < goal_final; goal += 10){
+            int calc = find_wallet(cost, init_w, goal, thres, games);
             init_w = calc;
             costs.push_back(cost);
             goals.push_back(goal);
